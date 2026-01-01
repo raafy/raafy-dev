@@ -55,7 +55,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/android-icon-192x192.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "any maskable",
+        purpose: "any",
       },
       {
         src: "/apple-icon-180x180.png",

@@ -416,7 +416,7 @@ export function ResumePDF({ data, translations }: ResumePDFProps) {
                   key={index}
                   style={[
                     styles.workItem,
-                    index === 0 && styles.workItemHighlight
+                    ...(index === 0 ? [styles.workItemHighlight] : [])
                   ]}
                 >
                   <View style={styles.workHeader}>

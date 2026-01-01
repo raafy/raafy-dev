@@ -44,8 +44,11 @@ export async function GET(request: NextRequest) {
     const date = new Date().toISOString().split("T")[0];
     const filename = `Raafy_Shiham_Resume_${date}.pdf`;
 
+    // Convert Buffer to Uint8Array for NextResponse compatibility
+    const pdfBytes = new Uint8Array(pdfBuffer);
+
     // Return PDF with proper headers
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(pdfBytes, {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition": `attachment; filename="${filename}"`,
