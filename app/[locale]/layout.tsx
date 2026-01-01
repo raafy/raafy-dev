@@ -21,11 +21,6 @@ interface LocaleLayoutProps {
 const firaCode = localFont({
   src: [
     {
-      path: "../../public/fonts/FiraCode-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
       path: "../../public/fonts/FiraCode-Regular.ttf",
       weight: "400",
       style: "normal",
@@ -48,6 +43,7 @@ const firaCode = localFont({
   ],
   display: "swap",
   variable: "--font-fira-code",
+  preload: false,
 });
 
 const googleSans = localFont({
@@ -58,19 +54,9 @@ const googleSans = localFont({
       style: "normal",
     },
     {
-      path: "../../public/fonts/GoogleSans-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
       path: "../../public/fonts/GoogleSans-Medium.ttf",
       weight: "500",
       style: "normal",
-    },
-    {
-      path: "../../public/fonts/GoogleSans-MediumItalic.ttf",
-      weight: "500",
-      style: "italic",
     },
     {
       path: "../../public/fonts/GoogleSans-SemiBold.ttf",
@@ -78,23 +64,15 @@ const googleSans = localFont({
       style: "normal",
     },
     {
-      path: "../../public/fonts/GoogleSans-SemiBoldItalic.ttf",
-      weight: "600",
-      style: "italic",
-    },
-    {
       path: "../../public/fonts/GoogleSans-Bold.ttf",
       weight: "700",
       style: "normal",
     },
-    {
-      path: "../../public/fonts/GoogleSans-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
   ],
   display: "swap",
   variable: "--font-google-sans",
+  preload: true,
+  adjustFontFallback: "Arial",
 });
 
 export function generateStaticParams() {
