@@ -1,7 +1,218 @@
 {
-  "homePage": {
-    "title": "{R}",
-    "heading": "Hi! I'm Raafy 👋🏽",
-    "description": "and welcome to my digital space"
+  "navigation": {
+    "menu": "Menu",
+    "home": "Home",
+    "resume": "Resume",
+    "projects": "Projects",
+    "contact": "Contact",
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Available for opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Raafy",
+    "role": "Software Developer",
+    "description": "Specializing in React.js, Next.js, and TypeScript. Building scalable, high-performance web applications with a focus on user experience and modern design.",
+    "viewResume": "View Resume",
+    "downloadCV": "Download CV",
+    "code": {
+      "fileName": "developer.tsx",
+      "name": "Raafy",
+      "role": "Software Developer",
+      "skills": "React, Next.js, TypeScript",
+      "passion": "Building great UX"
+    }
+  },
+  "stats": {
+    "experience": "Years Experience",
+    "projects": "Projects Completed",
+    "technologies": "Technologies",
+    "satisfaction": "Client Satisfaction"
+  },
+  "skills": {
+    "title": "Technical Expertise",
+    "description": "Technologies and tools I work with"
+  },
+  "cta": {
+    "title": "Let's Work Together",
+    "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "getInTouch": "Get In Touch",
+    "viewResume": "View Full Resume"
+  },
+  "footer": {
+    "about": "Passionate Software Developer specializing in building exceptional digital experiences. Creating scalable, performant web applications with modern technologies.",
+    "location": "Kuala Lumpur, Malaysia",
+    "availability": "Available for opportunities",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "tagline": "Let's build something amazing together",
+    "copyright": "All rights reserved.",
+    "builtWith": "Crafted with",
+    "using": "using Next.js, TypeScript & Framer Motion"
+  },
+  "resume": {
+    "title": "Resume",
+    "summary": "Professional Summary",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Technical Skills",
+    "languages": "Languages",
+    "present": "Present"
+  },
+  "projects": {
+    "title": "Under Construction",
+    "subtitle": "Building Something Amazing",
+    "message": "This page is currently under development. I'm working hard to showcase my projects in a creative and engaging way. Check back soon to see the amazing work I've been doing!"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's Work Together",
+    "description": "Have a project in mind or want to discuss opportunities? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+60 12-345-6789 (Optional)",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required"
+    },
+    "toast": {
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again later."
+    },
+    "social": {
+      "title": "Connect With Me",
+      "description": "You can also reach out to me through these platforms"
+    }
+  },
+  "resumeData": {
+    "basics": {
+      "label": "Software Developer",
+      "summary": "Results-oriented Software Developer with 4+ years of specialized experience in React.js, Next.js, and TypeScript for enterprise-grade web and mobile applications. Proven expertise in full-stack development, building scalable component architectures, and delivering high-performance user interfaces. Demonstrated success optimizing application performance (35% load time reduction), improving stability (80% crash rate reduction), and implementing comprehensive testing strategies using Jest and React Testing Library. Skilled in REST/GraphQL API integration, state management (Redux, Context API), and modern DevOps practices including CI/CD pipelines and AWS deployment. Strong collaborator in agile/scrum environments with experience in fintech domain, working cross-functionally with designers, backend developers, and QA teams to deliver secure, accessible, and maintainable solutions."
+    },
+    "work": [
+      {
+        "position": "Web Developer",
+        "highlights": [
+          "Develop and maintain enterprise-grade web applications using React.js, Next.js, and TypeScript, aligned with business requirements in the fintech domain.",
+          "Collaborate within an agile team environment, coordinating with designers, backend developers, and QA engineers to deliver secure and scalable solutions.",
+          "Implement responsive, accessible UIs; optimize page performance with code-splitting, lazy loading, and caching strategies.",
+          "Integrate complex REST APIs and services, ensuring seamless data flows across applications used by global clients.",
+          "Participate in code reviews, testing (Jest, React Testing Library), and CI/CD pipelines to maintain high code quality.",
+          "Contribute to discussions on architecture, design patterns, and best practices, enhancing team productivity and knowledge sharing."
+        ]
+      },
+      {
+        "position": "Software Developer",
+        "highlights": [
+          "Led front-end architecture and development in React.js & Next.js, building scalable, maintainable component libraries.",
+          "Optimized web application performance: implemented lazy loading, code splitting, reducing initial load time by ~35%.",
+          "Collaborated with UI/UX designers to ensure responsive, accessible design across devices.",
+          "Integrated REST APIs; managed state using Redux / Context API; handled error loading, data caching etc.",
+          "Developed and maintained test suites (unit + integration) with Jest and React Testing Library; enforced code hygiene via code reviews.",
+          "Set up CI/CD pipelines, handled deployments to AWS / Linux VPS, managed logging & monitoring."
+        ]
+      },
+      {
+        "position": "Mobile Application Developer",
+        "highlights": [
+          "Developed new features in React Native for mobile applications; led component design and state management.",
+          "Revised UX workflows, improved navigation and performance; reduced app crash rate by ~80%.",
+          "Coordinated with backend and UI teams to integrate APIs; ensured optimal user experience across iOS & Android.",
+          "Managed app release process, versioning, store submission, updates."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "area": "Computer Science",
+        "studyType": "Bachelor of Computer Science (Hons)"
+      },
+      {
+        "area": "Information Technology",
+        "studyType": "Foundation in Information Technology"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Frontend Frameworks & Libraries",
+        "level": "Expert"
+      },
+      {
+        "name": "Programming Languages",
+        "level": "Expert"
+      },
+      {
+        "name": "Styling & UI Frameworks",
+        "level": "Expert"
+      },
+      {
+        "name": "State Management & Architecture",
+        "level": "Expert"
+      },
+      {
+        "name": "Testing & Quality Assurance",
+        "level": "Advanced"
+      },
+      {
+        "name": "Build Tools & Performance",
+        "level": "Advanced"
+      },
+      {
+        "name": "Backend Technologies",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Databases & ORMs",
+        "level": "Intermediate"
+      },
+      {
+        "name": "DevOps & Infrastructure",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Mobile Development",
+        "level": "Advanced"
+      },
+      {
+        "name": "Development Practices & Methodologies",
+        "level": "Expert"
+      },
+      {
+        "name": "Collaboration & Leadership",
+        "level": "Expert"
+      }
+    ],
+    "languagesList": [
+      {
+        "language": "English",
+        "fluency": "Native Speaker"
+      },
+      {
+        "language": "Malay",
+        "fluency": "Professional Working Proficiency"
+      }
+    ]
   }
 }

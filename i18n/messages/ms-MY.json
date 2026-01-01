@@ -1,7 +1,218 @@
 {
-  "homePage": {
-    "title": "{R}",
-    "heading": "Hai! Saya Raafy 👋🏽",
-    "description": "dan selamat datang ke ruang digital saya"
+  "navigation": {
+    "menu": "Menu",
+    "home": "Laman Utama",
+    "resume": "Resume",
+    "projects": "Projek",
+    "contact": "Hubungi",
+    "theme": "Tema",
+    "language": "Bahasa"
+  },
+  "hero": {
+    "badge": "Terbuka untuk peluang",
+    "greeting": "Hai, saya",
+    "name": "Raafy",
+    "role": "Pembangun Perisian",
+    "description": "Pakar dalam React.js, Next.js, dan TypeScript. Membina aplikasi web berskala tinggi dan berprestasi dengan fokus kepada pengalaman pengguna dan reka bentuk moden.",
+    "viewResume": "Lihat Resume",
+    "downloadCV": "Muat Turun CV",
+    "code": {
+      "fileName": "pembangun.tsx",
+      "name": "Raafy",
+      "role": "Pembangun Perisian",
+      "skills": "React, Next.js, TypeScript",
+      "passion": "Membina UX yang hebat"
+    }
+  },
+  "stats": {
+    "experience": "Tahun Pengalaman",
+    "projects": "Projek Selesai",
+    "technologies": "Teknologi",
+    "satisfaction": "Kepuasan Klien"
+  },
+  "skills": {
+    "title": "Kepakaran Teknikal",
+    "description": "Teknologi dan alatan yang saya gunakan"
+  },
+  "cta": {
+    "title": "Mari Bekerjasama",
+    "description": "Saya sentiasa berminat untuk mendengar tentang projek dan peluang baharu. Sama ada anda mempunyai soalan atau hanya ingin bertanya khabar, jangan segan untuk menghubungi!",
+    "getInTouch": "Hubungi Saya",
+    "viewResume": "Lihat Resume Penuh"
+  },
+  "footer": {
+    "about": "Pembangun Perisian yang berdedikasi dalam membina pengalaman digital yang luar biasa. Mencipta aplikasi web yang berskala dan berprestasi tinggi dengan teknologi moden.",
+    "location": "Kuala Lumpur, Malaysia",
+    "availability": "Terbuka untuk peluang",
+    "navigation": "Navigasi",
+    "connect": "Berhubung",
+    "tagline": "Mari bina sesuatu yang menakjubkan bersama",
+    "copyright": "Hak cipta terpelihara.",
+    "builtWith": "Dibina dengan",
+    "using": "menggunakan Next.js, TypeScript & Framer Motion"
+  },
+  "resume": {
+    "title": "Resume",
+    "summary": "Ringkasan Profesional",
+    "experience": "Pengalaman Kerja",
+    "education": "Pendidikan",
+    "skills": "Kemahiran Teknikal",
+    "languages": "Bahasa",
+    "present": "Sekarang"
+  },
+  "projects": {
+    "title": "Dalam Pembinaan",
+    "subtitle": "Membina Sesuatu Yang Menakjubkan",
+    "message": "Halaman ini sedang dalam pembangunan. Saya sedang bekerja keras untuk mempamerkan projek-projek saya dengan cara yang kreatif dan menarik. Jemput kembali tidak lama lagi untuk melihat kerja-kerja hebat yang telah saya lakukan!"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "subtitle": "Mari Bekerjasama",
+    "description": "Ada projek dalam fikiran atau ingin berbincang tentang peluang? Saya ingin mendengar daripada anda! Isi borang di bawah dan saya akan menghubungi anda secepat mungkin.",
+    "info": {
+      "title": "Maklumat Hubungan",
+      "email": "E-mel",
+      "phone": "Telefon",
+      "location": "Lokasi",
+      "availability": "Ketersediaan"
+    },
+    "form": {
+      "name": "Nama",
+      "namePlaceholder": "Ahmad Bin Ali",
+      "email": "E-mel",
+      "emailPlaceholder": "ahmad@contoh.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+60 12-345-6789 (Pilihan)",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Tentang apa ini?",
+      "message": "Mesej",
+      "messagePlaceholder": "Beritahu saya tentang projek atau pertanyaan anda...",
+      "submit": "Hantar Mesej",
+      "submitting": "Menghantar..."
+    },
+    "validation": {
+      "nameRequired": "Nama diperlukan",
+      "emailRequired": "E-mel diperlukan",
+      "emailInvalid": "Sila masukkan alamat e-mel yang sah",
+      "subjectRequired": "Subjek diperlukan",
+      "messageRequired": "Mesej diperlukan"
+    },
+    "toast": {
+      "success": "Mesej berjaya dihantar! Saya akan menghubungi anda tidak lama lagi.",
+      "error": "Gagal menghantar mesej. Sila cuba lagi kemudian."
+    },
+    "social": {
+      "title": "Berhubung Dengan Saya",
+      "description": "Anda juga boleh menghubungi saya melalui platform-platform ini"
+    }
+  },
+  "resumeData": {
+    "basics": {
+      "label": "Pembangun Perisian",
+      "summary": "Pembangun Perisian berorientasikan hasil dengan pengalaman khusus 4+ tahun dalam React.js, Next.js, dan TypeScript untuk aplikasi web dan mudah alih peringkat enterprise. Kepakaran terbukti dalam pembangunan full-stack, membina seni bina komponen yang berskala, dan menghasilkan antara muka pengguna berprestasi tinggi. Kejayaan yang terbukti dalam mengoptimumkan prestasi aplikasi (pengurangan masa muatan 35%), meningkatkan kestabilan (pengurangan kadar kerosakan 80%), dan melaksanakan strategi ujian menyeluruh menggunakan Jest dan React Testing Library. Mahir dalam integrasi REST/GraphQL API, pengurusan state (Redux, Context API), dan amalan DevOps moden termasuk CI/CD pipelines dan deployment AWS. Kolaborator yang kuat dalam persekitaran agile/scrum dengan pengalaman dalam domain fintech, bekerja secara cross-functional dengan pereka bentuk, pembangun backend, dan pasukan QA untuk menghasilkan penyelesaian yang selamat, mudah diakses, dan mudah diselenggara."
+    },
+    "work": [
+      {
+        "position": "Pembangun Web",
+        "highlights": [
+          "Membangun dan menyelenggara aplikasi web peringkat enterprise menggunakan React.js, Next.js, dan TypeScript, selaras dengan keperluan perniagaan dalam domain fintech.",
+          "Bekerjasama dalam persekitaran pasukan agile, menyelaraskan dengan pereka bentuk, pembangun backend, dan jurutera QA untuk menghasilkan penyelesaian yang selamat dan berskala.",
+          "Melaksanakan UI yang responsif dan mudah diakses; mengoptimumkan prestasi halaman dengan code-splitting, lazy loading, dan strategi caching.",
+          "Mengintegrasikan REST API dan perkhidmatan yang kompleks, memastikan aliran data yang lancar merentasi aplikasi yang digunakan oleh klien global.",
+          "Mengambil bahagian dalam code reviews, testing (Jest, React Testing Library), dan CI/CD pipelines untuk mengekalkan kualiti kod yang tinggi.",
+          "Menyumbang kepada perbincangan mengenai seni bina, design patterns, dan best practices, meningkatkan produktiviti dan perkongsian pengetahuan pasukan."
+        ]
+      },
+      {
+        "position": "Pembangun Perisian",
+        "highlights": [
+          "Memimpin seni bina dan pembangunan front-end dalam React.js & Next.js, membina perpustakaan komponen yang berskala dan mudah diselenggara.",
+          "Mengoptimumkan prestasi aplikasi web: melaksanakan lazy loading, code splitting, mengurangkan masa muatan awal sebanyak ~35%.",
+          "Bekerjasama dengan pereka bentuk UI/UX untuk memastikan reka bentuk yang responsif dan mudah diakses merentasi peranti.",
+          "Mengintegrasikan REST API; menguruskan state menggunakan Redux / Context API; mengendalikan error loading, data caching dll.",
+          "Membangun dan menyelenggara test suites (unit + integration) dengan Jest dan React Testing Library; menguatkuasakan kebersihan kod melalui code reviews.",
+          "Menyediakan CI/CD pipelines, mengendalikan deployment ke AWS / Linux VPS, menguruskan logging & monitoring."
+        ]
+      },
+      {
+        "position": "Pembangun Aplikasi Mudah Alih",
+        "highlights": [
+          "Membangunkan ciri baharu dalam React Native untuk aplikasi mudah alih; memimpin reka bentuk komponen dan pengurusan state.",
+          "Menyemak semula aliran kerja UX, meningkatkan navigasi dan prestasi; mengurangkan kadar kerosakan aplikasi sebanyak ~80%.",
+          "Menyelaraskan dengan pasukan backend dan UI untuk mengintegrasikan API; memastikan pengalaman pengguna yang optimum merentasi iOS & Android.",
+          "Menguruskan proses pengeluaran aplikasi, versioning, penyerahan kedai, kemas kini."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "area": "Sains Komputer",
+        "studyType": "Ijazah Sarjana Muda Sains Komputer (Kepujian)"
+      },
+      {
+        "area": "Teknologi Maklumat",
+        "studyType": "Asasi dalam Teknologi Maklumat"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Framework & Perpustakaan Frontend",
+        "level": "Pakar"
+      },
+      {
+        "name": "Bahasa Pengaturcaraan",
+        "level": "Pakar"
+      },
+      {
+        "name": "Framework Styling & UI",
+        "level": "Pakar"
+      },
+      {
+        "name": "Pengurusan State & Seni Bina",
+        "level": "Pakar"
+      },
+      {
+        "name": "Ujian & Jaminan Kualiti",
+        "level": "Lanjutan"
+      },
+      {
+        "name": "Alat Binaan & Prestasi",
+        "level": "Lanjutan"
+      },
+      {
+        "name": "Teknologi Backend",
+        "level": "Pertengahan"
+      },
+      {
+        "name": "Pangkalan Data & ORM",
+        "level": "Pertengahan"
+      },
+      {
+        "name": "DevOps & Infrastruktur",
+        "level": "Pertengahan"
+      },
+      {
+        "name": "Pembangunan Mudah Alih",
+        "level": "Lanjutan"
+      },
+      {
+        "name": "Amalan & Metodologi Pembangunan",
+        "level": "Pakar"
+      },
+      {
+        "name": "Kolaborasi & Kepimpinan",
+        "level": "Pakar"
+      }
+    ],
+    "languagesList": [
+      {
+        "language": "Bahasa Inggeris",
+        "fluency": "Penutur Asli"
+      },
+      {
+        "language": "Bahasa Melayu",
+        "fluency": "Kemahiran Profesional"
+      }
+    ]
   }
 }

@@ -1,0 +1,274 @@
+{
+  "basics": {
+    "name": "Ahmed Raafy Shiham",
+    "label": "Software Developer",
+    "image": "",
+    "email": "raafyshiham@gmail.com",
+    "phone": "(+60)11-5404-3550",
+    "url": "https://raafy.dev",
+    "summary": "Results-oriented Software Engineer with 4+ years of specialized experience in React.js, Next.js, and TypeScript for enterprise-grade web and mobile applications. Proven expertise in full-stack development, building scalable component architectures, and delivering high-performance user interfaces. Demonstrated success optimizing application performance (35% load time reduction), improving stability (80% crash rate reduction), and implementing comprehensive testing strategies using Jest and React Testing Library. Skilled in REST/GraphQL API integration, state management (Redux, Context API), and modern DevOps practices including CI/CD pipelines and AWS deployment. Strong collaborator in agile/scrum environments with experience in fintech domain, working cross-functionally with designers, backend developers, and QA teams to deliver secure, accessible, and maintainable solutions.",
+    "location": {
+      "city": "Kuala Lumpur",
+      "countryCode": "MY",
+      "state": "Wilayah Persekutuan Kuala Lumpur"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "raafy",
+        "url": "https://github.com/raafy"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "raafyshiham",
+        "url": "https://www.linkedin.com/in/raafyshiham"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Doo Technology Sdn Bhd",
+      "position": "Web Developer",
+      "url": "https://doo.com",
+      "startDate": "2024-12-02",
+      "endDate": "",
+      "location": "Kuala Lumpur, MY",
+      "highlights": [
+        "Develop and maintain enterprise-grade web applications using React.js, Next.js, and TypeScript, aligned with business requirements in the fintech domain.",
+        "Collaborate within an agile team environment, coordinating with designers, backend developers, and QA engineers to deliver secure and scalable solutions.",
+        "Implement responsive, accessible UIs; optimize page performance with code-splitting, lazy loading, and caching strategies.",
+        "Integrate complex REST APIs and services, ensuring seamless data flows across applications used by global clients.",
+        "Participate in code reviews, testing (Jest, React Testing Library), and CI/CD pipelines to maintain high code quality.",
+        "Contribute to discussions on architecture, design patterns, and best practices, enhancing team productivity and knowledge sharing."
+      ]
+    },
+    {
+      "name": "Self Employed",
+      "position": "Software Engineer",
+      "url": "https://raafy.dev",
+      "startDate": "2023-04-16",
+      "endDate": "",
+      "location": "Kuala Lumpur / Remote",
+      "highlights": [
+        "Led front-end architecture and development in React.js & Next.js, building scalable, maintainable component libraries.",
+        "Optimized web application performance: implemented lazy loading, code splitting, reducing initial load time by ~35%.",
+        "Collaborated with UI/UX designers to ensure responsive, accessible design across devices.",
+        "Integrated REST APIs; managed state using Redux / Context API; handled error loading, data caching etc.",
+        "Developed and maintained test suites (unit + integration) with Jest and React Testing Library; enforced code hygiene via code reviews.",
+        "Set up CI/CD pipelines, handled deployments to AWS / Linux VPS, managed logging & monitoring."
+      ]
+    },
+    {
+      "name": "Tarsoft Sdn Bhd",
+      "position": "Mobile Application Developer",
+      "url": "https://raafy.dev",
+      "startDate": "2022-10-01",
+      "endDate": "2023-04-01",
+      "location": "Selangor, Malaysia",
+      "highlights": [
+        "Developed new features in React Native for mobile applications; led component design and state management.",
+        "Revised UX workflows, improved navigation and performance; reduced app crash rate by ~80%.",
+        "Coordinated with backend and UI teams to integrate APIs; ensured optimal user experience across iOS & Android.",
+        "Managed app release process, versioning, store submission, updates."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Management and Science University",
+      "url": "https://www.msu.edu.my/",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Computer Science (Hons)",
+      "startDate": "2019-09-01",
+      "endDate": "2023-05-01",
+      "score": "",
+      "courses": [],
+      "location": "Selangor, Malaysia"
+    },
+    {
+      "institution": "SEGi College Kuala Lumpur",
+      "url": "https://www.segi.edu.my/",
+      "area": "Information Technology",
+      "studyType": "Foundation in Information Technology",
+      "startDate": "2015-07-01",
+      "endDate": "2016-07-01",
+      "score": "",
+      "courses": [],
+      "location": "Kuala Lumpur, Malaysia"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend Frameworks & Libraries",
+      "level": "Expert",
+      "keywords": [
+        "React.js",
+        "Next.js",
+        "React Native",
+        "React Hooks",
+        "Redux",
+        "Context API"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "Expert",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Java",
+        "Golang",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "name": "Styling & UI Frameworks",
+      "level": "Expert",
+      "keywords": [
+        "Tailwind CSS",
+        "Styled Components",
+        "Responsive Design",
+        "Mobile-First Design",
+        "Cross-Browser Compatibility",
+        "Accessibility (WCAG/a11y)"
+      ]
+    },
+    {
+      "name": "State Management & Architecture",
+      "level": "Expert",
+      "keywords": [
+        "Redux",
+        "Context API",
+        "Component Architecture",
+        "Design Patterns",
+        "Scalable Architecture",
+        "Code Splitting",
+        "Lazy Loading"
+      ]
+    },
+    {
+      "name": "Testing & Quality Assurance",
+      "level": "Advanced",
+      "keywords": [
+        "Jest",
+        "React Testing Library",
+        "Unit Testing",
+        "Integration Testing",
+        "Test-Driven Development",
+        "Code Reviews",
+        "ESLint",
+        "Prettier"
+      ]
+    },
+    {
+      "name": "Build Tools & Performance",
+      "level": "Advanced",
+      "keywords": [
+        "Webpack",
+        "Babel",
+        "Vite",
+        "Bundle Optimization",
+        "Code Splitting",
+        "Lazy Loading",
+        "Performance Optimization",
+        "Web Vitals",
+        "Lighthouse"
+      ]
+    },
+    {
+      "name": "Backend Technologies",
+      "level": "Intermediate",
+      "keywords": [
+        "Node.js",
+        "Express.js",
+        "REST API",
+        "GraphQL",
+        "Apollo GraphQL",
+        "API Integration",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Databases & ORMs",
+      "level": "Intermediate",
+      "keywords": [
+        "PostgreSQL",
+        "MongoDB",
+        "Prisma",
+        "Database Design",
+        "Query Optimization",
+        "Data Caching"
+      ]
+    },
+    {
+      "name": "DevOps & Infrastructure",
+      "level": "Intermediate",
+      "keywords": [
+        "Git",
+        "GitHub Actions",
+        "GitLab CI",
+        "CI/CD Pipelines",
+        "Docker",
+        "AWS",
+        "Linux VPS",
+        "NGINX",
+        "PM2",
+        "Server Deployment",
+        "Monitoring & Logging"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Advanced",
+      "keywords": [
+        "React Native",
+        "iOS Development",
+        "Android Development",
+        "Mobile UI/UX",
+        "App Store Deployment",
+        "Google Play Deployment",
+        "Push Notifications",
+        "Offline Support"
+      ]
+    },
+    {
+      "name": "Development Practices & Methodologies",
+      "level": "Expert",
+      "keywords": [
+        "Agile/Scrum",
+        "Agile Methodologies",
+        "Sprint Planning",
+        "Code Reviews",
+        "Pair Programming",
+        "Technical Documentation",
+        "Best Practices",
+        "Clean Code"
+      ]
+    },
+    {
+      "name": "Collaboration & Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Cross-functional Collaboration",
+        "UI/UX Collaboration",
+        "Team Leadership",
+        "Mentoring",
+        "Problem Solving",
+        "Communication",
+        "Project Management"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Malay",
+      "fluency": "Professional Working Proficiency"
+    }
+  ]
+}

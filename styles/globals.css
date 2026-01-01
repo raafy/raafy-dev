@@ -5,11 +5,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --toast-bg: #ffffff;
+  --toast-color: #171717;
+  --toast-border: #e5e7eb;
+  --toast-success-bg: #f0fdf4;
+  --toast-success-color: #166534;
+  --toast-success-border: #86efac;
+  --toast-error-bg: #fef2f2;
+  --toast-error-color: #991b1b;
+  --toast-error-border: #fca5a5;
 }
 
 :root.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --toast-bg: #1a1a1a;
+  --toast-color: #ededed;
+  --toast-border: #333333;
+  --toast-success-bg: #064e3b;
+  --toast-success-color: #d1fae5;
+  --toast-success-border: #10b981;
+  --toast-error-bg: #7f1d1d;
+  --toast-error-color: #fee2e2;
+  --toast-error-border: #ef4444;
 }
 
 @theme inline {
@@ -23,4 +41,46 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: system-ui, sans-serif;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Remove sr-only on focus */
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

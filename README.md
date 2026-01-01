@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raafy Dev Portfolio
+
+A modern, multilingual portfolio website built with Next.js 15, featuring automated resume generation and internationalization support.
+
+## Features
+
+- **Multilingual Support**: Full i18n implementation with English and Malay translations
+- **Automated PDF Resume**: Dynamic PDF generation with creative styling using @react-pdf/renderer
+- **Dark Mode**: System-aware theme with manual toggle support
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Modern Animations**: Smooth transitions using Framer Motion
+- **SEO Optimized**: Structured data and meta tags for better search visibility
+- **Contact Form**: Integrated email functionality using Resend API
+- **Type-Safe**: Full TypeScript implementation
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **PDF Generation**: @react-pdf/renderer
+- **Internationalization**: next-intl
+- **Email**: Resend
+- **Icons**: Lucide React
+- **Fonts**: Fira Code, Google Sans
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your configuration
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file with the following:
 
-## Learn More
+```env
+# Resend API for contact form
+RESEND_API_KEY=your_resend_api_key
+CONTACT_EMAIL=your_email@example.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── app/                    # Next.js app directory
+│   ├── [locale]/          # Locale-based routing
+│   └── api/               # API routes (resume download, contact)
+├── components/            # React components
+│   ├── home/             # Home page components
+│   ├── layouts/          # Layout components
+│   ├── pdf/              # PDF generation components
+│   └── ui/               # Reusable UI components
+├── data/                  # Static data (resume.json)
+├── i18n/                  # Internationalization config
+├── lib/                   # Utility functions
+├── messages/              # Translation files
+├── public/                # Static assets
+├── styles/                # Global styles
+└── types/                 # TypeScript type definitions
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Features
 
-## Deploy on Vercel
+### PDF Resume Generation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The portfolio includes an automated PDF resume generator that:
+- Dynamically generates styled PDFs from JSON data
+- Supports multiple languages (English/Malay)
+- Features creative design with color-coded sections
+- Includes progress bars for skill proficiency
+- Maintains consistent styling across all pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Internationalization
+
+Built-in support for multiple languages:
+- Language switcher in navigation
+- Locale-based routing
+- Translated content for all pages
+- Automatic date formatting per locale
+
+## Scripts
+
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+pnpm type-check   # Run TypeScript type checking
+```
+
+## Customization
+
+### Resume Data
+
+Edit `data/resume.json` to update your personal information, work experience, skills, and education.
+
+### Translations
+
+Add or modify translations in:
+- `messages/en-US.json` for English
+- `messages/ms-MY.json` for Malay
+
+### Styling
+
+- Global styles: `styles/globals.css`
+- Tailwind config: `tailwind.config.ts`
+- PDF styles: `components/pdf/ResumePDF.tsx`
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest deployment option:
+
+```bash
+# Install Vercel CLI
+pnpm add -g vercel
+
+# Deploy
+vercel
+```
+
+### Environment Variables
+
+Remember to set up environment variables in your deployment platform:
+- `RESEND_API_KEY`
+- `CONTACT_EMAIL`
+
+## License
+
+MIT License - feel free to use this project as a template for your own portfolio.
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Animated with [Framer Motion](https://www.framer.com/motion)
+- PDF generation powered by [@react-pdf/renderer](https://react-pdf.org)

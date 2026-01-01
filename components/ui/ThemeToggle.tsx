@@ -25,16 +25,16 @@ export function ThemeToggle({ currentTheme }: ThemeToggleProps) {
     <button
       onClick={handleToggle}
       disabled={isPending}
-      className="absolute top-4 right-4 cursor-pointer rounded-lg bg-white p-2 text-sm font-medium text-black drop-shadow-md transition-colors hover:bg-gray-50 disabled:opacity-50 dark:border dark:border-white/40 dark:bg-black dark:text-white dark:hover:bg-white/5"
+      className="rounded-lg border border-gray-200 bg-white p-2 text-sm font-medium text-black transition-colors hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/5"
       aria-label="Toggle theme"
     >
       {currentTheme === "light" ? (
         <span>
-          <Sun />
+          <Sun size={16} strokeWidth={3} />
         </span>
       ) : (
         <span>
-          <Moon />
+          <Moon size={16} strokeWidth={3} />
         </span>
       )}
     </button>

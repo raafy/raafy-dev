@@ -5,8 +5,13 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import localFont from "next/font/local";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { Navigation } from "@/components/layouts/Navigation";
 import Footer from "@/components/layouts/Footer";
+import { ToastProvider } from "@/components/providers/ToastProvider";
+import { SkipLink } from "@/components/ui/SkipLink";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { baseMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
 interface LocaleLayoutProps {
   children: Readonly<React.ReactNode>;
@@ -96,6 +101,10 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+export async function generateMetadata(): Promise<Metadata> {
+  return baseMetadata;
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -120,12 +129,16 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`${firaCode.variable} ${googleSans.className} flex min-h-dvh flex-col items-center bg-white p-4 text-black antialiased dark:bg-black dark:text-white`}
+        className={`${firaCode.variable} ${googleSans.className} flex min-h-dvh flex-col bg-white text-black antialiased dark:bg-black dark:text-white`}
       >
+        <StructuredData type="person" />
+        <StructuredData type="website" />
         <NextIntlClientProvider>
-          <main className="relative flex w-full max-w-7xl grow items-center justify-center">
+          <SkipLink />
+          <ToastProvider />
+          <Navigation theme={theme} />
+          <main id="main-content" className="w-full flex-1 pt-16" tabIndex={-1}>
             {children}
-            <ThemeToggle currentTheme={theme} />
           </main>
           <Footer />
         </NextIntlClientProvider>
