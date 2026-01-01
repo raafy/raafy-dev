@@ -122,6 +122,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={theme}>
       <head>
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="theme-color" content="#000000" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=document.cookie.match(/theme=([^;]+)/)?.[1];if(t==='dark'||t==='light'){document.documentElement.className=t}else{document.documentElement.className=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}}catch(e){}})();`,
