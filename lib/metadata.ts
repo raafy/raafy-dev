@@ -42,7 +42,7 @@ export const baseMetadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: siteName,
@@ -55,7 +55,7 @@ export const baseMetadata: Metadata = {
     creator: "@raafyshiham",
     title: siteName,
     description: siteDescription,
-    images: ["/og-image.png"],
+    images: ["/og.png"],
   },
   robots: {
     index: true,
