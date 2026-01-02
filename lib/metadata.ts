@@ -93,10 +93,11 @@ export const baseMetadata: Metadata = {
       { url: "/ms-icon-310x310.png", sizes: "310x310", type: "image/png" },
     ],
   },
-  manifest: "/manifest",
-  verification: {
-    google: "your-google-verification-code",
-  },
+  verification: process.env.GOOGLE_VERIFICATION_CODE
+    ? {
+        google: process.env.GOOGLE_VERIFICATION_CODE,
+      }
+    : undefined,
 };
 
 export function getPageMetadata(
