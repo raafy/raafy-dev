@@ -58,7 +58,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-gray-200 bg-gradient-to-b from-white to-gray-50 dark:border-white/10 dark:from-black dark:to-gray-950">
+    <footer className="relative border-t border-gray-200 bg-linear-to-b from-white to-gray-50 dark:border-white/10 dark:from-black dark:to-gray-950">
       {/* Scroll to Top Button */}
       <motion.button
         initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function Footer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={scrollToTop}
-        className={`fixed right-8 bottom-8 z-40 rounded-full bg-gradient-to-r from-gray-900 to-gray-700 p-3 text-white shadow-lg transition-all hover:shadow-xl dark:from-white dark:to-gray-300 dark:text-black ${
+        className={`fixed right-8 bottom-8 z-40 rounded-full bg-linear-to-r from-gray-900 to-gray-700 p-3 text-white shadow-lg transition-all hover:shadow-xl dark:from-white dark:to-gray-300 dark:text-black ${
           showScrollTop
             ? "pointer-events-auto cursor-pointer"
             : "pointer-events-none"
@@ -89,7 +89,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
                 className="font-fira-code text-3xl font-bold"
               >
-                <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-gray-400">
+                <span className="bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-gray-400">
                   {"{R}"}
                 </span>
               </motion.div>
@@ -172,7 +172,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="my-12 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-700" />
+        <div className="my-12 h-px bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-gray-700" />
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-600 md:flex-row dark:text-gray-400">
