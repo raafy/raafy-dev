@@ -6,21 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:project-translations:dry": "tsx scripts/migrate-project-translations.ts --dry-run",
+    "migrate:project-translations": "tsx scripts/migrate-project-translations.ts",
+    "migrate:project-translations:ms:dry": "tsx scripts/migrate-project-translations.ts --dry-run --backfill-ms",
+    "migrate:project-translations:ms": "tsx scripts/migrate-project-translations.ts --backfill-ms"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.3.2",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "cookie": "^1.1.1",
+    "dotenv": "^17.2.3",
+    "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.562.0",
+    "mongoose": "^9.1.1",
     "motion": "^12.23.26",
     "next": "16.1.1",
     "next-intl": "^4.6.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hot-toast": "^2.6.0",
-    "resend": "^6.6.0"
+    "resend": "^6.6.0",
+    "tailwind-merge": "^3.4.0",
+    "zod": "^4.3.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/cookie": "^1.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -29,6 +44,7 @@
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

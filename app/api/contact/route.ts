@@ -1,5 +1,11 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
+import { contactSchema } from "@/lib/utils/validators";
+import {
+  validationErrorResponse,
+  internalErrorResponse,
+  errorResponse,
+} from "@/lib/utils/error-handler";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -225,26 +231,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Parse request body
+    // Parse and validate request body
     const body = await request.json();
-    const { name, email, subject, phone, message, turnstileToken } = body;
+    const validation = contactSchema.safeParse(body);
 
-    // Validate required fields
-    if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+    if (!validation.success) {
+      return validationErrorResponse(validation.error);
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email address" },
-        { status: 400 }
-      );
-    }
+    const { name, email, subject, phone, message, turnstileToken } =
+      validation.data;
 
     // Verify Turnstile token (if provided)
     if (turnstileToken && process.env.TURNSTILE_SECRET_KEY) {
@@ -265,10 +261,7 @@ export async function POST(request: NextRequest) {
       const turnstileData = await turnstileResponse.json();
 
       if (!turnstileData.success) {
-        return NextResponse.json(
-          { error: "Bot verification failed" },
-          { status: 400 }
-        );
+        return errorResponse("Bot verification failed", 400);
       }
     }
 
@@ -291,10 +284,7 @@ export async function POST(request: NextRequest) {
 
     if (adminEmail.error) {
       console.error("Failed to send admin email:", adminEmail.error);
-      return NextResponse.json(
-        { error: "Failed to send email" },
-        { status: 500 }
-      );
+      return errorResponse("Failed to send email. Please try again later.", 500);
     }
 
     // Send auto-reply to user
@@ -315,10 +305,6 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Contact form error:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return internalErrorResponse(error, "Contact form error");
   }
 }

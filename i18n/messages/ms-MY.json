@@ -65,6 +65,30 @@
     "subtitle": "Membina Sesuatu Yang Menakjubkan",
     "message": "Halaman ini sedang dalam pembangunan. Saya sedang bekerja keras untuk mempamerkan projek-projek saya dengan cara yang kreatif dan menarik. Jemput kembali tidak lama lagi untuk melihat kerja-kerja hebat yang telah saya lakukan!"
   },
+  "projectsList": {
+    "title": "Projek",
+    "description": "Terokai portfolio projek pembangunan web saya. Membina pengalaman digital yang menakjubkan dengan teknologi moden.",
+    "emptyTitle": "Tiada Projek Lagi",
+    "emptyDescription": "Jemput kembali tidak lama lagi untuk projek-projek yang hebat!",
+    "showing": "Memaparkan {shown} daripada {total} projek"
+  },
+  "projectsFilters": {
+    "title": "Penapis",
+    "clearAll": "Kosongkan semua",
+    "technologies": "Teknologi",
+    "platforms": "Platform",
+    "categories": "Kategori"
+  },
+  "projectsGrid": {
+    "noResults": "Tiada projek ditemui yang sepadan dengan penapis anda."
+  },
+  "projectCard": {
+    "featured": "Pilihan",
+    "platformsLabel": "Platform:",
+    "code": "Kod",
+    "liveDemo": "Demo Langsung",
+    "present": "Sekarang"
+  },
   "contact": {
     "title": "Hubungi Saya",
     "subtitle": "Mari Bekerjasama",

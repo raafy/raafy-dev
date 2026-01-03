@@ -65,6 +65,30 @@
     "subtitle": "Building Something Amazing",
     "message": "This page is currently under development. I'm working hard to showcase my projects in a creative and engaging way. Check back soon to see the amazing work I've been doing!"
   },
+  "projectsList": {
+    "title": "Projects",
+    "description": "Explore my portfolio of web development projects. Building amazing digital experiences with modern technologies.",
+    "emptyTitle": "No Projects Yet",
+    "emptyDescription": "Check back soon for amazing projects!",
+    "showing": "Showing {shown} of {total} projects"
+  },
+  "projectsFilters": {
+    "title": "Filters",
+    "clearAll": "Clear all",
+    "technologies": "Technologies",
+    "platforms": "Platforms",
+    "categories": "Categories"
+  },
+  "projectsGrid": {
+    "noResults": "No projects found matching your filters."
+  },
+  "projectCard": {
+    "featured": "Featured",
+    "platformsLabel": "Platforms:",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "present": "Present"
+  },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's Work Together",

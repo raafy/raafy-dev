@@ -1,0 +1,20 @@
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  const response = {
+    csp: "default-src 'self'; script-src 'self'; script-src 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; https://www.google-analytics.com; https://www.clarity.ms; https://www.facebook.com; https://www.linkedin.com; https://www.twitter.com; https://www.instagram.com;",
+    headers: {
+      'Cache-Control': 'public, max-age=31536000, immutable',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': "1; mode=block; report-uri=https://www.google.com",
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'interest-cohort=analytics',
+    },
+  };
+
+  return new Response(JSON.stringify(response), {
+    headers: response.headers,
+    status: 200,
+  });
+}
