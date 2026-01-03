@@ -2,7 +2,7 @@ import { Hero } from "@/components/home/Hero";
 import { Stats } from "@/components/home/Stats";
 import { FeaturedSkills } from "@/components/home/FeaturedSkills";
 import { CallToAction } from "@/components/home/CallToAction";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 
 export default async function Home() {
   const messages = await getMessages();

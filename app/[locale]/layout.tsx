@@ -8,6 +8,7 @@ import localFont from "next/font/local";
 import { Navigation } from "@/components/layouts/Navigation";
 import Footer from "@/components/layouts/Footer";
 import { ToastProvider } from "@/components/providers/ToastProvider";
+import { ThemeInitializer } from "@/components/providers/ThemeInitializer";
 import { SkipLink } from "@/components/ui/SkipLink";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { baseMetadata } from "@/lib/metadata";
@@ -103,11 +104,6 @@ export default async function LocaleLayout({
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#000000" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=document.cookie.match(/theme=([^;]+)/)?.[1];if(t==='dark'||t==='light'){document.documentElement.className=t}else{document.documentElement.className=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}}catch(e){}})();`,
-          }}
-        />
       </head>
       <body
         className={`${firaCode.variable} ${googleSans.className} flex min-h-dvh flex-col bg-white text-black antialiased dark:bg-black dark:text-white`}
@@ -117,6 +113,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <SkipLink />
           <ToastProvider />
+          <ThemeInitializer />
           <Navigation theme={theme} />
           <main id="main-content" className="w-full flex-1 pt-16" tabIndex={-1}>
             {children}

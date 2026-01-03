@@ -8,6 +8,29 @@ import { getTranslations, getMessages } from "next-intl/server";
 import { getPageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 
+type ResumeMessages = {
+  basics: {
+    label: string;
+    summary: string;
+  };
+  work: Array<{
+    position: string;
+    highlights: string[];
+  }>;
+  education: Array<{
+    area: string;
+    studyType: string;
+  }>;
+  skills: Array<{
+    name: string;
+    level: string;
+  }>;
+  languagesList: Array<{
+    language: string;
+    fluency: string;
+  }>;
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata(
     "Resume - Professional Experience",
@@ -18,8 +41,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ResumePage() {
   const t = await getTranslations("resume");
-  const messages = await getMessages();
-  const resumeMessages = messages.resumeData as any;
+  const messages = (await getMessages()) as unknown as { resumeData: ResumeMessages };
+  const resumeMessages = messages.resumeData;
 
   return (
     <div className="mx-auto w-full max-w-5xl space-y-16 px-4 py-12 md:px-8 md:py-16">
@@ -71,7 +94,7 @@ export default async function ResumePage() {
 
       <ResumeSection title={t("languages")} delay={0.6}>
         <div className="flex flex-wrap gap-4">
-          {resumeMessages.languagesList.map((lang: any, index: number) => (
+          {resumeMessages.languagesList.map((lang, index) => (
             <div
               key={index}
               className="rounded-lg border border-gray-200 bg-white/50 px-4 py-2 dark:border-white/20 dark:bg-white/5"
