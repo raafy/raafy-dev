@@ -1,8 +1,8 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { toggleTheme, type Theme } from "@/lib/theme";
-import { usePathname, useRouter } from "next/navigation";
+import { type Theme } from "@/lib/theme";
+import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 interface ThemeToggleProps {
@@ -11,12 +11,20 @@ interface ThemeToggleProps {
 
 export function ThemeToggle({ currentTheme }: ThemeToggleProps) {
   const [isPending, startTransition] = useTransition();
-  const pathname = usePathname();
   const router = useRouter();
 
   const handleToggle = () => {
     startTransition(async () => {
-      await toggleTheme(pathname);
+      // Client-side theme toggle without server actions
+      const newTheme: Theme = currentTheme === "light" ? "dark" : "light";
+
+      // Set cookie
+      document.cookie = `theme=${newTheme}; path=/; max-age=31536000; sameSite=lax`;
+
+      // Update DOM immediately
+      document.documentElement.className = newTheme;
+
+      // Refresh to ensure consistency
       router.refresh();
     });
   };
@@ -25,7 +33,7 @@ export function ThemeToggle({ currentTheme }: ThemeToggleProps) {
     <button
       onClick={handleToggle}
       disabled={isPending}
-      className="rounded-lg border border-gray-200 bg-white p-2 text-sm font-medium text-black transition-colors hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/5"
+      className="rounded-lg border border-gray-200 bg-white cursor-pointer p-2 text-sm font-medium text-black transition-colors hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/5"
       aria-label="Toggle theme"
     >
       {currentTheme === "light" ? (

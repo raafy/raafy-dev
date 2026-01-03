@@ -2,10 +2,10 @@
 
 import { motion, useMotionValue, useTransform, animate } from "motion/react";
 import { useEffect, useRef } from "react";
-import { Briefcase, Code, Award, Users } from "lucide-react";
+import { Briefcase, Award, Users } from "lucide-react";
 
 interface StatsProps {
-  messages: any;
+  messages: Record<string, string>;
 }
 
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {

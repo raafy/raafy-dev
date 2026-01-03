@@ -2,7 +2,7 @@ import Script from "next/script";
 
 interface StructuredDataProps {
   type?: "person" | "website" | "breadcrumb";
-  data?: Record<string, any>;
+  data?: Record<string, unknown>;
 }
 
 export function StructuredData({ type = "person", data }: StructuredDataProps) {

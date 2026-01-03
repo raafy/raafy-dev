@@ -7,7 +7,22 @@ import { useLocale } from "next-intl";
 import resumeData from "@/data/resume.json";
 
 interface HeroProps {
-  messages: any;
+  messages: {
+    badge: string;
+    greeting: string;
+    name: string;
+    role: string;
+    description: string;
+    viewResume: string;
+    downloadCV: string;
+    code: {
+      fileName: string;
+      name: string;
+      role: string;
+      skills: string;
+      passion: string;
+    };
+  };
 }
 
 export function Hero({ messages: t }: HeroProps) {
@@ -214,7 +229,7 @@ export function Hero({ messages: t }: HeroProps) {
                       name:
                     </span>{" "}
                     <span className="text-green-600 dark:text-green-400">
-                      '{t.code.name}'
+                      &apos;{t.code.name}&apos;
                     </span>
                     <span className="text-gray-600 dark:text-gray-400">,</span>
                   </AnimatedCodeLine>
@@ -224,7 +239,7 @@ export function Hero({ messages: t }: HeroProps) {
                       role:
                     </span>{" "}
                     <span className="text-green-600 dark:text-green-400">
-                      '{t.code.role}'
+                      &apos;{t.code.role}&apos;
                     </span>
                     <span className="text-gray-600 dark:text-gray-400">,</span>
                   </AnimatedCodeLine>
@@ -237,7 +252,7 @@ export function Hero({ messages: t }: HeroProps) {
                       [
                     </span>
                     <span className="text-green-600 dark:text-green-400">
-                      '{t.code.skills}'
+                      &apos;{t.code.skills}&apos;
                     </span>
                     <span className="text-yellow-600 dark:text-yellow-400">
                       ]
@@ -250,7 +265,7 @@ export function Hero({ messages: t }: HeroProps) {
                       passion:
                     </span>{" "}
                     <span className="text-green-600 dark:text-green-400">
-                      '{t.code.passion}'
+                      &apos;{t.code.passion}&apos;
                     </span>
                   </AnimatedCodeLine>
 

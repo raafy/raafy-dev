@@ -6,7 +6,7 @@ import { Link } from "@/i18n/routing";
 import resumeData from "@/data/resume.json";
 
 interface CallToActionProps {
-  messages: any;
+  messages: Record<string, string>;
 }
 
 export function CallToAction({ messages: t }: CallToActionProps) {

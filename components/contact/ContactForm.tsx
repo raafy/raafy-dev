@@ -45,7 +45,6 @@ export function ContactForm({ messages: t }: ContactFormProps) {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [turnstileToken, setTurnstileToken] = useState<string>("");
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -87,10 +86,7 @@ export function ContactForm({ messages: t }: ContactFormProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...formData,
-          turnstileToken,
-        }),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();

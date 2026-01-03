@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Hammer, Wrench, HardHat, Sparkles } from "lucide-react";
+import { useMemo } from "react";
 
 interface UnderConstructionProps {
   messages: {
@@ -12,6 +13,17 @@ interface UnderConstructionProps {
 }
 
 export function UnderConstruction({ messages: t }: UnderConstructionProps) {
+  const sparklePositions = useMemo(() => {
+    return Array.from({ length: 6 }, (_, index) => {
+      const left = (index * 37) % 100;
+      const top = (index * 61 + 20) % 100;
+      return {
+        left: `${left}%`,
+        top: `${top}%`,
+      };
+    });
+  }, []);
+
   return (
     <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-20 md:px-8">
       <div className="relative mx-auto max-w-3xl text-center">
@@ -57,7 +69,7 @@ export function UnderConstruction({ messages: t }: UnderConstructionProps) {
                 y: [0, -10, 0],
               }}
               transition={{
-                duration: 2,
+                duration: 2.5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -114,50 +126,66 @@ export function UnderConstruction({ messages: t }: UnderConstructionProps) {
               </div>
             </motion.div>
 
+            {/* Construction Text */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative mb-8 flex justify-center"
+            >
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white dark:text-gray-900 mb-2">
+                  {t.title}
+                </h2>
+                <p className="text-gray-300 dark:text-gray-400 mb-8">
+                  {t.subtitle}
+                </p>
+                <div className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-6 py-3 font-mono text-sm backdrop-blur-sm">
+                  <code className="text-green-600 dark:text-green-400">
+                    npm run dev
+                  </code>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Sparkles */}
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{
-                  scale: [0, 1, 0],
-                  opacity: [0, 1, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                }}
-                className="absolute"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-              >
-                <Sparkles
-                  size={16}
-                  className="text-yellow-500"
-                  strokeWidth={2}
-                />
-              </motion.div>
-            ))}
+            <div className="relative">
+              {sparklePositions.map((pos, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3,
+                  }}
+                  className="absolute"
+                  style={{
+                    left: pos.left,
+                    top: pos.top,
+                  }}
+                >
+                  <Sparkles
+                    size={16}
+                    className="text-yellow-500"
+                    strokeWidth={2}
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
-        {/* Text Content */}
+        {/* Message */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6"
+          transition={{ duration: 0.8 }}
+          className="text-center"
         >
-          <h1 className="text-4xl font-bold md:text-6xl lg:text-7xl">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent dark:from-white dark:via-gray-300 dark:to-white">
-              {t.title}
-            </span>
-          </h1>
-
-          <p className="text-xl font-medium text-gray-600 dark:text-gray-400 md:text-2xl">
-            {t.subtitle}
+          <p className="text-lg text-gray-300 dark:text-gray-400">
+            {t.message}
           </p>
 
           <motion.div

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import resumeData from "@/data/resume.json";
 
 interface FeaturedSkillsProps {
-  messages: any;
+  messages: Record<string, string>;
 }
 
 export function FeaturedSkills({ messages: t }: FeaturedSkillsProps) {

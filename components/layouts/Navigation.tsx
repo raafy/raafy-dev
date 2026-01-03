@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/routing";
@@ -26,17 +26,20 @@ export function Navigation({ theme }: NavigationProps) {
     { name: t("contact"), href: "/contact" },
   ];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    setIsOpen(false);
+    // Close mobile menu when route changes
+    const timer = setTimeout(() => setIsOpen(false), 100);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   useEffect(() => {
