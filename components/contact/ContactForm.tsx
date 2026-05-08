@@ -300,13 +300,36 @@ export function ContactForm({ messages: t }: ContactFormProps) {
       </div>
 
       {/* ALTCHA Captcha Widget */}
-      <altcha-widget
-        ref={altchaRef}
-        challenge="/api/challenge"
-        name="altchaPayload"
-        auto="onfocus"
-        configuration={JSON.stringify({ hideFooter: true, hideLogo: true })}
-      />
+      <div
+        className="
+          [--altcha-max-width:100%]
+          [--altcha-border-radius:0.5rem]
+          [--altcha-border-width:1px]
+          [--altcha-padding:0.75rem_1rem]
+          [--altcha-color-base:#ffffff]
+          [--altcha-color-base-content:#111827]
+          [--altcha-color-border:#d1d5db]
+          [--altcha-color-border-focus:#111827]
+          [--altcha-color-primary:#111827]
+          [--altcha-color-primary-content:#ffffff]
+          [--altcha-color-error:#ef4444]
+          [--altcha-color-success:#10b981]
+          dark:[--altcha-color-base:#000000]
+          dark:[--altcha-color-base-content:#ffffff]
+          dark:[--altcha-color-border:rgb(255_255_255/0.2)]
+          dark:[--altcha-color-border-focus:#ffffff]
+          dark:[--altcha-color-primary:#ffffff]
+          dark:[--altcha-color-primary-content:#000000]
+        "
+      >
+        <altcha-widget
+          ref={altchaRef}
+          challenge="/api/challenge"
+          name="altchaPayload"
+          auto="onfocus"
+          configuration={JSON.stringify({ hideFooter: true, hideLogo: true })}
+        />
+      </div>
 
       {/* Submit Button */}
       <motion.button
