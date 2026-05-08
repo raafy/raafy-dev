@@ -6,6 +6,7 @@ import {
   internalErrorResponse,
   errorResponse,
 } from "@/lib/utils/error-handler";
+import { verifySolution, sha } from "altcha/lib";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -239,30 +240,30 @@ export async function POST(request: NextRequest) {
       return validationErrorResponse(validation.error);
     }
 
-    const { name, email, subject, phone, message, turnstileToken } =
+    const { name, email, subject, phone, message, altchaPayload } =
       validation.data;
 
-    // Verify Turnstile token (if provided)
-    if (turnstileToken && process.env.TURNSTILE_SECRET_KEY) {
-      const turnstileResponse = await fetch(
-        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            secret: process.env.TURNSTILE_SECRET_KEY,
-            response: turnstileToken,
-          }),
-        }
-      );
+    // Verify ALTCHA captcha payload
+    const hmacSecret = process.env.ALTCHA_HMAC_KEY;
+    if (!hmacSecret) {
+      console.error("ALTCHA_HMAC_KEY not configured");
+      return errorResponse("Server configuration error", 500);
+    }
 
-      const turnstileData = await turnstileResponse.json();
+    try {
+      const payload = JSON.parse(atob(altchaPayload));
+      const result = await verifySolution({
+        challenge: payload.challenge,
+        solution: payload.solution,
+        deriveKey: sha.deriveKey,
+        hmacSignatureSecret: hmacSecret,
+      });
 
-      if (!turnstileData.success) {
-        return errorResponse("Bot verification failed", 400);
+      if (!result.verified) {
+        return errorResponse("Captcha verification failed", 400);
       }
+    } catch {
+      return errorResponse("Invalid captcha payload", 400);
     }
 
     // Sanitize inputs

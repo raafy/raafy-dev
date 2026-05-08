@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import { Mail, User, Phone, MessageSquare, Send, Loader2 } from "lucide-react";
 import toast from "react-hot-toast";
+import "altcha";
+import "altcha/altcha.css";
+import "altcha/types/react";
 
 interface ContactFormProps {
   messages: {
@@ -45,6 +48,25 @@ export function ContactForm({ messages: t }: ContactFormProps) {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [altchaPayload, setAltchaPayload] = useState<string | null>(null);
+  const altchaRef = useRef<HTMLElement & { reset: () => void } | null>(null);
+
+  useEffect(() => {
+    const widget = altchaRef.current;
+    if (!widget) return;
+
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.payload) {
+        setAltchaPayload(detail.payload);
+      } else {
+        setAltchaPayload(null);
+      }
+    };
+
+    widget.addEventListener("statechange", handler);
+    return () => widget.removeEventListener("statechange", handler);
+  }, []);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -86,7 +108,7 @@ export function ContactForm({ messages: t }: ContactFormProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, altchaPayload }),
       });
 
       const data = await response.json();
@@ -101,6 +123,8 @@ export function ContactForm({ messages: t }: ContactFormProps) {
           message: "",
         });
         setErrors({});
+        setAltchaPayload(null);
+        altchaRef.current?.reset();
       } else {
         toast.error(data.error || t.toast.error);
       }
@@ -275,10 +299,14 @@ export function ContactForm({ messages: t }: ContactFormProps) {
         )}
       </div>
 
-      {/* Turnstile Widget Placeholder */}
-      {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
-        <div id="turnstile-widget" className="flex justify-center" />
-      )}
+      {/* ALTCHA Captcha Widget */}
+      <altcha-widget
+        ref={altchaRef}
+        challenge="/api/challenge"
+        name="altchaPayload"
+        auto="onfocus"
+        configuration={JSON.stringify({ hideFooter: true, hideLogo: true })}
+      />
 
       {/* Submit Button */}
       <motion.button

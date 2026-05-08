@@ -83,7 +83,7 @@ export const contactSchema = z.object({
   subject: z.string().min(1, "Subject is required").max(200, "Subject too long"),
   phone: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters").max(5000, "Message too long"),
-  turnstileToken: z.string().optional(),
+  altchaPayload: z.string().min(1, "Captcha verification is required"),
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;
