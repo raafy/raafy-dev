@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ExternalLink, Github, Calendar, Star } from "lucide-react";
+import { ExternalLink, Calendar, Star } from "lucide-react";
 import type { IProject } from "@/types/project";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
@@ -107,7 +107,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-50 dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/5"
               >
-                <Github size={16} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-0.5 6-2.5 6-6a4.8 4.8 0 0 0-1-3.5 3.8 3.8 0 0 0 0.5-3 3.8 3.8 0 0 0-3 .5 9.3 9.3 0 0 0-5-1.5 9.3 9.3 0 0 0-5 1.5 3.8 3.8 0 0 0-3-.5 3.8 3.8 0 0 0 .5 3A4.8 4.8 0 0 0 4 9c0 3.5 3 5.5 6 6a4.8 4.8 0 0 0-1 3.5V22" />
+                  <path d="M9 22c-3 1-5-1-5-3" />
+                </svg>
                 {t("code")}
               </a>
             )}

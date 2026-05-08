@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import resumeData from "@/data/resume.json";
@@ -180,8 +180,19 @@ export function Hero({ messages: t }: HeroProps) {
                   className="cursor-pointer rounded-lg bg-gray-100 p-3 text-gray-700 transition-colors hover:bg-gray-200 dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/20"
                   aria-label={profile.network}
                 >
-                  {profile.network === "GitHub" && <Github size={20} />}
-                  {profile.network === "LinkedIn" && <Linkedin size={20} />}
+                  {profile.network === "GitHub" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-0.5 6-2.5 6-6a4.8 4.8 0 0 0-1-3.5 3.8 3.8 0 0 0 0.5-3 3.8 3.8 0 0 0-3 .5 9.3 9.3 0 0 0-5-1.5 9.3 9.3 0 0 0-5 1.5 3.8 3.8 0 0 0-3-.5 3.8 3.8 0 0 0 .5 3A4.8 4.8 0 0 0 4 9c0 3.5 3 5.5 6 6a4.8 4.8 0 0 0-1 3.5V22" />
+                      <path d="M9 22c-3 1-5-1-5-3" />
+                    </svg>
+                  )}
+                  {profile.network === "LinkedIn" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect width="4" height="12" x="2" y="9" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  )}
                 </motion.a>
               ))}
             </motion.div>
