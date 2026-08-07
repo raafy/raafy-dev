@@ -3,12 +3,20 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import { ResumePDF } from "@/components/pdf/ResumePDF";
 import resumeData from "@/data/resume.json";
 import type { ResumeData } from "@/types/resume";
+import { isFocusId, DEFAULT_FOCUS } from "@/lib/resumeFocus";
+import { filterResumeData } from "@/lib/resumeFilter";
 
 export async function GET(request: NextRequest) {
   try {
-    // Get locale from query params (defaults to 'en')
     const { searchParams } = new URL(request.url);
-    const locale = searchParams.get("locale") || "en";
+
+    // Locale can arrive as either the short form ("en"/"ms") or the full
+    // next-intl locale ("en-US"/"ms-MY"); normalize to the short form.
+    const rawLocale = searchParams.get("locale") || "en";
+    const locale = rawLocale.toLowerCase().startsWith("ms") ? "ms" : "en";
+
+    const focusParam = searchParams.get("focus");
+    const focus = isFocusId(focusParam) ? focusParam : DEFAULT_FOCUS;
 
     // Translations based on locale
     const translations = {
@@ -32,17 +40,20 @@ export async function GET(request: NextRequest) {
 
     const t = translations[locale as keyof typeof translations] || translations.en;
 
+    const tailoredData = filterResumeData(resumeData as ResumeData, focus);
+
     // Generate PDF buffer
     const pdfBuffer = await renderToBuffer(
       ResumePDF({
-        data: resumeData as ResumeData,
+        data: tailoredData,
         translations: t,
       })
     );
 
     // Create filename with date
     const date = new Date().toISOString().split("T")[0];
-    const filename = `Raafy_Shiham_Resume_${date}.pdf`;
+    const focusSuffix = focus === DEFAULT_FOCUS ? "" : `_${focus}`;
+    const filename = `Raafy_Shiham_Resume${focusSuffix}_${date}.pdf`;
 
     // Convert Buffer to Uint8Array for NextResponse compatibility
     const pdfBytes = new Uint8Array(pdfBuffer);

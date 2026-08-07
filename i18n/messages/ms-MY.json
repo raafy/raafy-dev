@@ -58,7 +58,30 @@
     "education": "Pendidikan",
     "skills": "Kemahiran Teknikal",
     "languages": "Bahasa",
-    "present": "Sekarang"
+    "present": "Sekarang",
+    "downloadPdf": "Muat Turun PDF",
+    "focus": {
+      "heading": "Sesuaikan resume ini",
+      "description": "Pilih fokus untuk menonjolkan pengalaman dan kemahiran yang paling relevan untuk peranan yang anda sasarkan.",
+      "areas": {
+        "fullstack": {
+          "label": "Full-Stack",
+          "description": "Gambaran lengkap merentasi web, mobile, dan penghantaran projek."
+        },
+        "frontend": {
+          "label": "Frontend",
+          "description": "Disesuaikan untuk peranan kejuruteraan React / Next.js dan UI."
+        },
+        "mobile": {
+          "label": "Mobile",
+          "description": "Disesuaikan untuk peranan React Native dan aplikasi mobile."
+        },
+        "leadership": {
+          "label": "Kepimpinan",
+          "description": "Menekankan pemilikan tugas, bimbingan, dan penghantaran merentas pasukan."
+        }
+      }
+    }
   },
   "projects": {
     "title": "Dalam Pembinaan",

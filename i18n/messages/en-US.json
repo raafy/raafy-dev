@@ -58,7 +58,30 @@
     "education": "Education",
     "skills": "Technical Skills",
     "languages": "Languages",
-    "present": "Present"
+    "present": "Present",
+    "downloadPdf": "Download PDF",
+    "focus": {
+      "heading": "Tailor this resume",
+      "description": "Pick a focus to highlight the most relevant experience and skills for the role you're targeting.",
+      "areas": {
+        "fullstack": {
+          "label": "Full-Stack",
+          "description": "The complete picture across web, mobile, and delivery."
+        },
+        "frontend": {
+          "label": "Frontend",
+          "description": "Tailored for React / Next.js and UI engineering roles."
+        },
+        "mobile": {
+          "label": "Mobile",
+          "description": "Tailored for React Native and mobile app roles."
+        },
+        "leadership": {
+          "label": "Leadership",
+          "description": "Emphasizes ownership, mentoring, and cross-team delivery."
+        }
+      }
+    }
   },
   "projects": {
     "title": "Under Construction",

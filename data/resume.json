@@ -40,6 +40,14 @@
         "Integrate complex REST APIs and services, ensuring seamless data flows across applications used by global clients.",
         "Participate in code reviews, testing (Jest, React Testing Library), and CI/CD pipelines to maintain high code quality.",
         "Contribute to discussions on architecture, design patterns, and best practices, enhancing team productivity and knowledge sharing."
+      ],
+      "highlightTags": [
+        ["frontend", "core"],
+        ["leadership", "core"],
+        ["frontend"],
+        [],
+        ["leadership"],
+        ["leadership"]
       ]
     },
     {
@@ -56,6 +64,14 @@
         "Integrated REST APIs; managed state using Redux / Context API; handled error loading, data caching etc.",
         "Developed and maintained test suites (unit + integration) with Jest and React Testing Library; enforced code hygiene via code reviews.",
         "Set up CI/CD pipelines, handled deployments to AWS / Linux VPS, managed logging & monitoring."
+      ],
+      "highlightTags": [
+        ["frontend", "leadership", "core"],
+        ["frontend"],
+        ["frontend"],
+        [],
+        [],
+        []
       ]
     },
     {
@@ -70,6 +86,12 @@
         "Revised UX workflows, improved navigation and performance; reduced app crash rate by ~80%.",
         "Coordinated with backend and UI teams to integrate APIs; ensured optimal user experience across iOS & Android.",
         "Managed app release process, versioning, store submission, updates."
+      ],
+      "highlightTags": [
+        ["mobile", "core"],
+        ["mobile"],
+        ["mobile", "leadership"],
+        ["mobile"]
       ]
     }
   ],
@@ -101,6 +123,7 @@
     {
       "name": "Frontend Frameworks & Libraries",
       "level": "Expert",
+      "focus": ["frontend", "mobile"],
       "keywords": [
         "React.js",
         "Next.js",
@@ -113,6 +136,7 @@
     {
       "name": "Programming Languages",
       "level": "Expert",
+      "focus": ["frontend", "mobile"],
       "keywords": [
         "JavaScript",
         "TypeScript",
@@ -126,6 +150,7 @@
     {
       "name": "Styling & UI Frameworks",
       "level": "Expert",
+      "focus": ["frontend"],
       "keywords": [
         "Tailwind CSS",
         "Styled Components",
@@ -138,6 +163,7 @@
     {
       "name": "State Management & Architecture",
       "level": "Expert",
+      "focus": ["frontend", "mobile"],
       "keywords": [
         "Redux",
         "Context API",
@@ -151,6 +177,7 @@
     {
       "name": "Testing & Quality Assurance",
       "level": "Advanced",
+      "focus": ["frontend", "mobile"],
       "keywords": [
         "Jest",
         "React Testing Library",
@@ -165,6 +192,7 @@
     {
       "name": "Build Tools & Performance",
       "level": "Advanced",
+      "focus": ["frontend"],
       "keywords": [
         "Webpack",
         "Babel",
@@ -222,6 +250,7 @@
     {
       "name": "Mobile Development",
       "level": "Advanced",
+      "focus": ["mobile"],
       "keywords": [
         "React Native",
         "iOS Development",
@@ -236,6 +265,7 @@
     {
       "name": "Development Practices & Methodologies",
       "level": "Expert",
+      "focus": ["leadership"],
       "keywords": [
         "Agile/Scrum",
         "Agile Methodologies",
@@ -250,6 +280,7 @@
     {
       "name": "Collaboration & Leadership",
       "level": "Expert",
+      "focus": ["leadership"],
       "keywords": [
         "Cross-functional Collaboration",
         "UI/UX Collaboration",

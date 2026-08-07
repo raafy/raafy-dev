@@ -26,6 +26,8 @@ export interface ResumeData {
     endDate: string;
     location: string;
     highlights: string[];
+    /** Focus-area tags per highlight (same index as `highlights`), used to tailor the resume. */
+    highlightTags?: string[][];
   }>;
   education: Array<{
     institution: string;
@@ -42,6 +44,8 @@ export interface ResumeData {
     name: string;
     level: string;
     keywords: string[];
+    /** Focus areas this skill category is most relevant to, used to reorder for tailored views. */
+    focus?: string[];
   }>;
   languages: Array<{
     language: string;
